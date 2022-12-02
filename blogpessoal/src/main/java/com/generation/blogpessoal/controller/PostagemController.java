@@ -224,9 +224,6 @@ public class PostagemController {
 	/*
 	 * Editar uma postagem 
 	 * 
-	 * @PutMapping: Annotation (Anotação), que indica que o método abaixo responderá todas
-	 * as requisições do tipo PUT que forem enviadas no endpoint /postagens
-	 * 
 	 * O Método ResponseEntity<Postagem> putPostagem (@RequestBody Postagem postagem) será do tipo 
 	 * ResponseEntity porque ele responderá a requisição (Request), com uma HTTP Response (Resposta http), 
 	 * neste caso Response Status 200 => OK, caso a Postagem seja atualizada na tabela. Caso não seja 
@@ -271,10 +268,7 @@ public class PostagemController {
 			
 	/*
 	 * Deletar uma postagem 
-	 *   
-	 * @DeleteMapping("/{id}"): Annotation (Anotação), que indica que o método abaixo responderá todas
-	 * as requisições do tipo DELETE que forem enviadas no endpoint /postagens/id
-	 * 
+
 	 * O Método deletePostagem(@PathVariable Long id)  será do tipo ResponseEntity porque ele responderá a 
 	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 204 => NO_CONTENT 
 	 * caso a Postagem seja encontrada e excluída da tabela. Caso não seja encontrada, a resposta será 
@@ -284,10 +278,6 @@ public class PostagemController {
 	 * passada no endereço da requisição, e insere no parâmetro id do método deletePostagem
 	 * 
 	 * Exemplo:
-	 * 
-	 * http://localhost:8080/postagens/1
-	 * 
-	 * o parâmetro id do método receberá o valor 1 (Id que será procurado na tabela postagens e deletado via deleteById())
 	 * 
 	 * <?>: O ?, no contexto de genéricos, basicamente serve como um coringa, ou seja, ele representa "qualquer tipo". 
 	 * Sua função é permitir o uso do polimorfismo junto com genéricos, logo você não está definindo um tipo específico 
